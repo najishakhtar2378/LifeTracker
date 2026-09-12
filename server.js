@@ -38,6 +38,17 @@ app.use('/api/goals', require('./routes/goal'));
 // app.use('/api/users',      require('./routes/users'));
 
 // ---------------------
+// Root Route
+// ---------------------
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Welcome to the LifeTrack API! 🚀',
+    version: '1.0.0'
+  });
+});
+
+// ---------------------
 // 404 Handler
 // ---------------------
 app.use((req, res) => {
